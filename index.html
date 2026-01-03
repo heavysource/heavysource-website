@@ -1,11 +1,147 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-  <title>Heavy Source</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Heavy Source | Industrial Procurement</title>
+  <meta name="description" content="Heavy Source provides industrial procurement support across North America — sourcing, expediting, and vendor coordination." />
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <h1>Heavy Source</h1>
-  <p>North America Industrial Procurement</p>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <div class="brand">
+        <div class="brand-mark">HS</div>
+        <div class="brand-text">
+          <div class="brand-name">Heavy Source</div>
+          <div class="brand-tag">North America Industrial Procurement</div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="#services">Services</a>
+        <a href="#industries">Industries</a>
+        <a href="#contact" class="btn small">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <h1>Industrial procurement support that moves fast.</h1>
+          <p class="lead">
+            Heavy Source helps industrial teams source critical parts, coordinate vendors, and expedite deliveries —
+            with clear communication and accountable execution.
+          </p>
+
+          <div class="cta-row">
+            <a class="btn" href="#contact">Request a quote</a>
+            <a class="btn ghost" href="#services">See services</a>
+          </div>
+
+          <div class="trust">
+            <div class="chip">Sourcing & RFQs</div>
+            <div class="chip">Expediting</div>
+            <div class="chip">Vendor coordination</div>
+            <div class="chip">Documentation support</div>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="card">
+            <h2>What we do</h2>
+            <ul>
+              <li>Find qualified suppliers and alternate options</li>
+              <li>Get quotes fast and compare total landed cost</li>
+              <li>Expedite production + shipping with updates you can trust</li>
+              <li>Support invoices, packing lists, and delivery coordination</li>
+            </ul>
+            <div class="note">
+              <strong>Fast start:</strong> send part numbers + quantities + required date.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="wrap">
+        <h2>Services</h2>
+        <div class="grid3">
+          <div class="tile">
+            <h3>Sourcing & Procurement</h3>
+            <p>RFQs, supplier discovery, alternates, availability checks, and purchase coordination.</p>
+          </div>
+          <div class="tile">
+            <h3>Expediting</h3>
+            <p>Delivery follow-up, vendor escalation, shipping coordination, and status reporting.</p>
+          </div>
+          <div class="tile">
+            <h3>Project Support</h3>
+            <p>Material tracking, documentation support, and vendor management for field or plant needs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="industries" class="section alt">
+      <div class="wrap">
+        <h2>Industries</h2>
+        <div class="grid2">
+          <div class="tile">
+            <h3>Industrial & Manufacturing</h3>
+            <p>MRO items, plant maintenance, critical spares, and time-sensitive replacements.</p>
+          </div>
+          <div class="tile">
+            <h3>Energy & Environmental</h3>
+            <p>Equipment and instrumentation support with organized coordination and delivery clarity.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="wrap contact">
+        <div>
+          <h2>Contact</h2>
+          <p>
+            Email us your request and we’ll respond with next steps (RFQ, options, and timeline).
+          </p>
+          <div class="contact-box">
+            <div><strong>Email:</strong> <a href="mailto:info@heavysource.net">info@heavysource.net</a></div>
+            <div><strong>Service area:</strong> North America</div>
+          </div>
+          <p class="smallprint">
+            (We’ll swap in your final email + phone once you confirm them.)
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>What to include in your email</h3>
+          <ul class="checklist">
+            <li>Part numbers / description</li>
+            <li>Quantity</li>
+            <li>Ship-to city/state</li>
+            <li>Required date</li>
+            <li>Any preferred brands or approved vendors</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div>© <span id="y"></span> Heavy Source</div>
+      <div class="muted">Industrial Procurement • North America</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
