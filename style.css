@@ -122,8 +122,10 @@ main{padding:46px 0 70px}
 .hero::before{
   content: "";
   position: absolute;
-  inset: 0;
-  background: rgba(5,10,20,.72);
+  insetb: 0;
+  .hero::before{
+  background: rgba(5,10,20,.82);
+};
   z-index: 0;
 }
 
