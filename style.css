@@ -383,3 +383,33 @@ main{padding:46px 0 70px}
   font-size:14px;
   line-height:1.4;
 }
+.contact-form{
+  margin-top:20px;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  max-width:600px;
+}
+
+.form-row input,
+.form-row textarea{
+  width:100%;
+  padding:12px 14px;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,.15);
+  background:rgba(255,255,255,.03);
+  color:#fff;
+  font-size:14px;
+}
+
+.form-row input::placeholder,
+.form-row textarea::placeholder{
+  color:#94a3b8;
+}
+
+.form-row input:focus,
+.form-row textarea:focus{
+  outline:none;
+  border-color:rgba(96,165,250,.6);
+  background:rgba(255,255,255,.05);
+}
