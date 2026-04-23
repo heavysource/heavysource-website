@@ -324,7 +324,12 @@ main{padding:46px 0 70px}
 .service-card .overlay{
   position:absolute;
   inset:0;
-  background:rgba(5,10,20,.62);
+  background: linear-gradient(
+  to bottom,
+  rgba(5,10,20,.55),
+  
+  max-width: 85%;rgba(5,10,20,.75)
+);
 }
 
 .service-card .content{
