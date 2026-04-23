@@ -336,6 +336,7 @@ main{padding:46px 0 70px}
   position:relative;
   z-index:1;
   padding:20px;
+  max-width: 85%;
 }
 
 .service-card h3{
