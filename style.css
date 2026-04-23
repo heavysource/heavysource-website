@@ -113,9 +113,25 @@ h3{font-size: 16px; color:var(--text); margin-top:0}
 .btn.small{padding:8px 12px;border-radius:12px;font-weight:800}
 
 main{padding:46px 0 70px}
-
 .hero{
-  padding:28px 0 22px;
+  position: relative;
+  padding: 28px 0 22px;
+  background: url("hero-bg.jpg.JPG") center/cover no-repeat;
+}
+
+.hero::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(5,10,20,.72);
+  z-index: 0;
+}
+
+.hero .wrap{
+  position: relative;
+  z-index: 1;
+}
+
 }
 .hero-grid{
   display:grid;
