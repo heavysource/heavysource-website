@@ -296,3 +296,51 @@ main{padding:46px 0 70px}
   margin: 0;
   color: #d1d5db;
 }
+
+/* ===== PREMIUM SERVICE CARDS ===== */
+.services-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+  margin-top:20px;
+}
+
+.service-card{
+  position:relative;
+  min-height:220px;
+  border-radius:16px;
+  overflow:hidden;
+  background-size:cover;
+  background-position:center;
+  box-shadow:0 10px 30px rgba(0,0,0,.4);
+  transition:transform .25s ease;
+  border:1px solid rgba(255,255,255,.08);
+}
+
+.service-card:hover{
+  transform:translateY(-6px);
+}
+
+.service-card .overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(5,10,20,.62);
+}
+
+.service-card .content{
+  position:relative;
+  z-index:1;
+  padding:20px;
+}
+
+.service-card h3{
+  margin:0 0 10px;
+  color:#fff;
+}
+
+.service-card p{
+  margin:0;
+  color:#d1d5db;
+  font-size:15px;
+  line-height:1.5;
+}
