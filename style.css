@@ -318,7 +318,8 @@ main{padding:46px 0 70px}
 }
 
 .service-card:hover{
-  transform:translateY(-6px);
+  transform: translateY(-6px);
+
 }
 
 .service-card .overlay{
