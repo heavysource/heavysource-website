@@ -644,3 +644,10 @@ main {
     transition: none !important;
   }
 }
+.brand,
+.brand *,
+.brand:visited,
+.brand:hover,
+.brand:focus {
+  text-decoration: none !important;
+}
