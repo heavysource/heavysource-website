@@ -1,1632 +1,1255 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <meta
-    name="description"
-    content="Heavy Source provides industrial procurement, equipment sourcing, vendor coordination, material expediting, and project logistics throughout the United States, Canada, and Mexico."
-  >
-
-  <meta
-    name="keywords"
-    content="industrial procurement, equipment sourcing, heavy equipment sourcing, project logistics, vendor management, material expediting, heavy haul logistics, North America"
-  >
-
-  <meta name="author" content="Heavy Source LLC">
-
-  <title>Capabilities | Heavy Source LLC</title>
-
-  <link rel="stylesheet" href="style.css?v=5">
-
-  <style>
-    /* =========================================================
-       CAPABILITIES PAGE
-       These styles are intentionally contained in this file.
-       We can move them into style.css after the page is approved.
-    ========================================================= */
-
-    :root {
-      --cap-bg: #07111f;
-      --cap-bg-soft: #0c1929;
-      --cap-panel: #101f31;
-      --cap-panel-light: #17283b;
-      --cap-border: rgba(255, 255, 255, 0.1);
-      --cap-text: #f6f8fb;
-      --cap-muted: #aab7c7;
-      --cap-accent: #f28c28;
-      --cap-accent-hover: #ff9d3f;
-      --cap-white: #ffffff;
-      --cap-max-width: 1200px;
-      --cap-radius: 16px;
-      --cap-shadow: 0 20px 50px rgba(0, 0, 0, 0.22);
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      background: var(--cap-bg);
-      color: var(--cap-text);
-    }
-
-    .cap-container {
-      width: min(calc(100% - 40px), var(--cap-max-width));
-      margin: 0 auto;
-    }
-
-    .cap-section {
-      padding: 88px 0;
-    }
-
-    .cap-section-dark {
-      background: var(--cap-bg-soft);
-    }
-
-    .cap-section-label {
-      display: inline-block;
-      margin: 0 0 14px;
-      color: var(--cap-accent);
-      font-size: 0.78rem;
-      font-weight: 800;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-    }
-
-    .cap-section-heading {
-      max-width: 760px;
-      margin-bottom: 42px;
-    }
-
-    .cap-section-heading h2,
-    .cap-intro-copy h2,
-    .cap-coverage-copy h2,
-    .cap-final-cta h2 {
-      margin: 0 0 18px;
-      color: var(--cap-white);
-      font-size: clamp(2rem, 4vw, 3.25rem);
-      line-height: 1.08;
-    }
-
-    .cap-section-heading p,
-    .cap-intro-copy p,
-    .cap-coverage-copy p,
-    .cap-final-cta p {
-      margin: 0;
-      color: var(--cap-muted);
-      font-size: 1.05rem;
-      line-height: 1.75;
-    }
-
-    /* Header */
-
-    .cap-header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      border-bottom: 1px solid var(--cap-border);
-      background: rgba(7, 17, 31, 0.94);
-      backdrop-filter: blur(14px);
-    }
-
-    .cap-nav {
-      min-height: 76px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 30px;
-    }
-
-    .cap-logo {
-      display: inline-flex;
-      align-items: baseline;
-      gap: 6px;
-      color: var(--cap-white);
-      text-decoration: none;
-      font-size: 1.28rem;
-      font-weight: 900;
-      letter-spacing: 0.06em;
-    }
-
-    .cap-logo-source {
-      color: var(--cap-accent);
-    }
-
-    .cap-menu {
-      display: flex;
-      align-items: center;
-      gap: 28px;
-    }
-
-    .cap-menu a {
-      color: #d6deea;
-      text-decoration: none;
-      font-size: 0.94rem;
-      font-weight: 700;
-      transition:
-        color 0.2s ease,
-        transform 0.2s ease;
-    }
-
-    .cap-menu a:hover,
-    .cap-menu a.active {
-      color: var(--cap-white);
-    }
-
-    .cap-menu a:hover {
-      transform: translateY(-1px);
-    }
-
-    .cap-menu .cap-nav-rfq {
-      padding: 12px 18px;
-      border-radius: 8px;
-      background: var(--cap-accent);
-      color: #111821;
-    }
-
-    .cap-menu .cap-nav-rfq:hover {
-      background: var(--cap-accent-hover);
-      color: #111821;
-    }
-
-    .cap-menu-button {
-      display: none;
-      border: 1px solid var(--cap-border);
-      border-radius: 8px;
-      background: transparent;
-      color: var(--cap-white);
-      padding: 9px 12px;
-      font-size: 1.35rem;
-      cursor: pointer;
-    }
-
-    /* Hero */
-
-    .cap-hero {
-      position: relative;
-      isolation: isolate;
-      overflow: hidden;
-      min-height: 700px;
-      display: flex;
-      align-items: center;
-      background:
-        linear-gradient(
-          90deg,
-          rgba(4, 11, 21, 0.98) 0%,
-          rgba(4, 11, 21, 0.91) 48%,
-          rgba(4, 11, 21, 0.62) 100%
-        ),
-        radial-gradient(
-          circle at 82% 26%,
-          rgba(242, 140, 40, 0.2),
-          transparent 34%
-        ),
-        linear-gradient(
-          145deg,
-          #07111f 0%,
-          #10243a 55%,
-          #07111f 100%
-        );
-    }
-
-    .cap-hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      z-index: -2;
-      opacity: 0.14;
-      background-image:
-        linear-gradient(
-          rgba(255, 255, 255, 0.08) 1px,
-          transparent 1px
-        ),
-        linear-gradient(
-          90deg,
-          rgba(255, 255, 255, 0.08) 1px,
-          transparent 1px
-        );
-      background-size: 55px 55px;
-    }
-
-    .cap-hero::after {
-      content: "";
-      position: absolute;
-      right: -140px;
-      bottom: -190px;
-      z-index: -1;
-      width: 620px;
-      height: 620px;
-      border: 1px solid rgba(242, 140, 40, 0.28);
-      border-radius: 50%;
-      box-shadow:
-        0 0 0 75px rgba(242, 140, 40, 0.04),
-        0 0 0 150px rgba(242, 140, 40, 0.025);
-    }
-
-    .cap-hero-layout {
-      display: grid;
-      grid-template-columns: minmax(0, 1.3fr) minmax(300px, 0.7fr);
-      align-items: center;
-      gap: 70px;
-      padding: 92px 0;
-    }
-
-    .cap-eyebrow {
-      margin: 0 0 18px;
-      color: var(--cap-accent);
-      font-size: 0.82rem;
-      font-weight: 900;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-    }
-
-    .cap-hero h1 {
-      max-width: 800px;
-      margin: 0;
-      color: var(--cap-white);
-      font-size: clamp(3rem, 7vw, 5.8rem);
-      line-height: 0.98;
-      letter-spacing: -0.045em;
-    }
-
-    .cap-hero-description {
-      max-width: 710px;
-      margin: 28px 0 0;
-      color: #c1ccda;
-      font-size: clamp(1.06rem, 2vw, 1.25rem);
-      line-height: 1.72;
-    }
-
-    .cap-hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-top: 34px;
-    }
-
-    .cap-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 50px;
-      padding: 0 22px;
-      border: 1px solid transparent;
-      border-radius: 9px;
-      text-decoration: none;
-      font-size: 0.95rem;
-      font-weight: 800;
-      transition:
-        transform 0.2s ease,
-        background 0.2s ease,
-        border-color 0.2s ease;
-    }
-
-    .cap-button:hover {
-      transform: translateY(-2px);
-    }
-
-    .cap-button-primary {
-      background: var(--cap-accent);
-      color: #101720;
-    }
-
-    .cap-button-primary:hover {
-      background: var(--cap-accent-hover);
-    }
-
-    .cap-button-secondary {
-      border-color: rgba(255, 255, 255, 0.28);
-      background: rgba(255, 255, 255, 0.04);
-      color: var(--cap-white);
-    }
-
-    .cap-button-secondary:hover {
-      border-color: rgba(255, 255, 255, 0.52);
-      background: rgba(255, 255, 255, 0.08);
-    }
-
-    .cap-hero-panel {
-      padding: 30px;
-      border: 1px solid var(--cap-border);
-      border-radius: var(--cap-radius);
-      background: rgba(16, 31, 49, 0.82);
-      box-shadow: var(--cap-shadow);
-      backdrop-filter: blur(12px);
-    }
-
-    .cap-hero-panel h2 {
-      margin: 0 0 22px;
-      font-size: 1.12rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .cap-hero-stat {
-      display: grid;
-      grid-template-columns: 54px 1fr;
-      gap: 15px;
-      align-items: center;
-      padding: 18px 0;
-      border-top: 1px solid var(--cap-border);
-    }
-
-    .cap-hero-stat:first-of-type {
-      border-top: 0;
-      padding-top: 0;
-    }
-
-    .cap-stat-number {
-      color: var(--cap-accent);
-      font-size: 1.65rem;
-      font-weight: 900;
-    }
-
-    .cap-hero-stat strong {
-      display: block;
-      margin-bottom: 4px;
-      color: var(--cap-white);
-      font-size: 0.95rem;
-    }
-
-    .cap-hero-stat span {
-      color: var(--cap-muted);
-      font-size: 0.84rem;
-      line-height: 1.45;
-    }
-
-    /* Introduction */
-
-    .cap-intro-layout {
-      display: grid;
-      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-      gap: 70px;
-      align-items: start;
-    }
-
-    .cap-intro-highlights {
-      display: grid;
-      gap: 16px;
-    }
-
-    .cap-highlight {
-      display: grid;
-      grid-template-columns: 48px 1fr;
-      gap: 16px;
-      padding: 22px;
-      border: 1px solid var(--cap-border);
-      border-radius: 12px;
-      background: var(--cap-panel);
-    }
-
-    .cap-highlight-number {
-      color: var(--cap-accent);
-      font-size: 1.1rem;
-      font-weight: 900;
-    }
-
-    .cap-highlight h3 {
-      margin: 0 0 7px;
-      font-size: 1rem;
-    }
-
-    .cap-highlight p {
-      margin: 0;
-      color: var(--cap-muted);
-      font-size: 0.92rem;
-      line-height: 1.55;
-    }
-
-    /* Capabilities */
-
-    .capability-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 22px;
-    }
-
-    .capability-card {
-      position: relative;
-      overflow: hidden;
-      padding: 34px;
-      border: 1px solid var(--cap-border);
-      border-radius: var(--cap-radius);
-      background:
-        linear-gradient(
-          145deg,
-          rgba(23, 40, 59, 0.98),
-          rgba(12, 25, 41, 0.98)
-        );
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-      transition:
-        transform 0.25s ease,
-        border-color 0.25s ease;
-    }
-
-    .capability-card::after {
-      content: "";
-      position: absolute;
-      top: -55px;
-      right: -55px;
-      width: 130px;
-      height: 130px;
-      border-radius: 50%;
-      background: rgba(242, 140, 40, 0.06);
-      transition: transform 0.25s ease;
-    }
-
-    .capability-card:hover {
-      transform: translateY(-5px);
-      border-color: rgba(242, 140, 40, 0.46);
-    }
-
-    .capability-card:hover::after {
-      transform: scale(1.25);
-    }
-
-    .capability-number {
-      margin-bottom: 20px;
-      color: var(--cap-accent);
-      font-size: 0.82rem;
-      font-weight: 900;
-      letter-spacing: 0.15em;
-    }
-
-    .capability-card h3 {
-      margin: 0 0 14px;
-      color: var(--cap-white);
-      font-size: 1.52rem;
-    }
-
-    .capability-card > p {
-      margin: 0 0 22px;
-      color: var(--cap-muted);
-      line-height: 1.66;
-    }
-
-    .capability-card ul {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px 18px;
-      margin: 0;
-      padding: 20px 0 0;
-      border-top: 1px solid var(--cap-border);
-      list-style: none;
-    }
-
-    .capability-card li {
-      position: relative;
-      padding-left: 18px;
-      color: #d6deea;
-      font-size: 0.9rem;
-      line-height: 1.45;
-    }
-
-    .capability-card li::before {
-      content: "";
-      position: absolute;
-      top: 0.48em;
-      left: 0;
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--cap-accent);
-    }
-
-    /* Process */
-
-    .cap-process-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .cap-process-step {
-      position: relative;
-      padding: 28px;
-      border: 1px solid var(--cap-border);
-      border-radius: 14px;
-      background: rgba(255, 255, 255, 0.025);
-    }
-
-    .cap-process-step span {
-      display: inline-flex;
-      width: 42px;
-      height: 42px;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 19px;
-      border-radius: 9px;
-      background: rgba(242, 140, 40, 0.13);
-      color: var(--cap-accent);
-      font-weight: 900;
-    }
-
-    .cap-process-step h3 {
-      margin: 0 0 11px;
-      font-size: 1.15rem;
-    }
-
-    .cap-process-step p {
-      margin: 0;
-      color: var(--cap-muted);
-      font-size: 0.93rem;
-      line-height: 1.62;
-    }
-
-    /* Industries */
-
-    .cap-industry-grid {
-      display: grid;
-      grid-template-columns: repeat(5, minmax(0, 1fr));
-      gap: 14px;
-    }
-
-    .cap-industry-item {
-      min-height: 105px;
-      display: flex;
-      align-items: flex-end;
-      padding: 20px;
-      border: 1px solid var(--cap-border);
-      border-radius: 12px;
-      background:
-        linear-gradient(
-          145deg,
-          rgba(255, 255, 255, 0.055),
-          rgba(255, 255, 255, 0.015)
-        );
-      color: var(--cap-white);
-      font-weight: 800;
-      transition:
-        transform 0.22s ease,
-        border-color 0.22s ease;
-    }
-
-    .cap-industry-item:hover {
-      transform: translateY(-4px);
-      border-color: rgba(242, 140, 40, 0.44);
-    }
-
-    /* Why Heavy Source */
-
-    .cap-why-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .cap-why-card {
-      padding: 28px;
-      border-top: 3px solid var(--cap-accent);
-      border-radius: 4px 4px 14px 14px;
-      background: var(--cap-panel);
-    }
-
-    .cap-why-card h3 {
-      margin: 0 0 12px;
-      font-size: 1.18rem;
-    }
-
-    .cap-why-card p {
-      margin: 0;
-      color: var(--cap-muted);
-      font-size: 0.93rem;
-      line-height: 1.62;
-    }
-
-    /* Coverage */
-
-    .cap-coverage-layout {
-      display: grid;
-      grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
-      align-items: center;
-      gap: 70px;
-    }
-
-    .cap-country-grid {
-      display: grid;
-      gap: 14px;
-    }
-
-    .cap-country-card {
-      display: grid;
-      grid-template-columns: 54px 1fr;
-      gap: 18px;
-      align-items: center;
-      padding: 23px;
-      border: 1px solid var(--cap-border);
-      border-radius: 12px;
-      background: var(--cap-panel);
-    }
-
-    .cap-country-code {
-      color: var(--cap-accent);
-      font-size: 1.3rem;
-      font-weight: 900;
-    }
-
-    .cap-country-card strong {
-      display: block;
-      margin-bottom: 4px;
-      font-size: 1.05rem;
-    }
-
-    .cap-country-card span {
-      color: var(--cap-muted);
-      font-size: 0.9rem;
-    }
-
-    /* Final CTA */
-
-    .cap-final-cta {
-      padding: 90px 0;
-      background:
-        linear-gradient(
-          120deg,
-          rgba(242, 140, 40, 0.14),
-          transparent 42%
-        ),
-        var(--cap-bg-soft);
-      border-top: 1px solid var(--cap-border);
-    }
-
-    .cap-final-cta-layout {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
-      gap: 55px;
-      align-items: center;
-    }
-
-    .cap-final-cta-copy {
-      max-width: 790px;
-    }
-
-    .cap-final-cta-actions {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      min-width: 210px;
-    }
-
-    /* Footer */
-
-    .cap-footer {
-      padding: 62px 0 25px;
-      border-top: 1px solid var(--cap-border);
-      background: #050d18;
-    }
-
-    .cap-footer-layout {
-      display: grid;
-      grid-template-columns: 1.5fr 0.7fr 0.9fr;
-      gap: 55px;
-    }
-
-    .cap-footer h3 {
-      margin: 0 0 17px;
-      font-size: 0.95rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .cap-footer-brand p,
-    .cap-footer-contact p {
-      max-width: 430px;
-      color: var(--cap-muted);
-      font-size: 0.9rem;
-      line-height: 1.6;
-    }
-
-    .cap-footer-links,
-    .cap-footer-contact {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    .cap-footer-links a,
-    .cap-footer-contact a {
-      margin: 0 0 10px;
-      color: #c8d2df;
-      text-decoration: none;
-      font-size: 0.91rem;
-    }
-
-    .cap-footer-links a:hover,
-    .cap-footer-contact a:hover {
-      color: var(--cap-accent);
-    }
-
-    .cap-footer-bottom {
-      margin-top: 45px;
-      padding-top: 22px;
-      border-top: 1px solid var(--cap-border);
-      color: #7f8c9b;
-      font-size: 0.82rem;
-    }
-
-    /* Responsive */
-
-    @media (max-width: 1050px) {
-      .cap-hero-layout,
-      .cap-intro-layout,
-      .cap-coverage-layout {
-        grid-template-columns: 1fr;
-      }
-
-      .cap-hero {
-        min-height: auto;
-      }
-
-      .cap-hero-panel {
-        max-width: 680px;
-      }
-
-      .cap-process-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .cap-industry-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
-
-      .cap-why-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 820px) {
-      .cap-menu-button {
-        display: block;
-      }
-
-      .cap-menu {
-        position: absolute;
-        top: 76px;
-        right: 20px;
-        left: 20px;
-        display: none;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0;
-        padding: 12px;
-        border: 1px solid var(--cap-border);
-        border-radius: 12px;
-        background: #0a1625;
-        box-shadow: var(--cap-shadow);
-      }
-
-      .cap-menu.open {
-        display: flex;
-      }
-
-      .cap-menu a {
-        padding: 13px 14px;
-        border-radius: 7px;
-      }
-
-      .cap-menu .cap-nav-rfq {
-        margin-top: 8px;
-        text-align: center;
-      }
-
-      .capability-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .cap-final-cta-layout {
-        grid-template-columns: 1fr;
-      }
-
-      .cap-final-cta-actions {
-        flex-direction: row;
-        flex-wrap: wrap;
-      }
-
-      .cap-footer-layout {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .cap-footer-brand {
-        grid-column: 1 / -1;
-      }
-    }
-
-    @media (max-width: 620px) {
-      .cap-container {
-        width: min(calc(100% - 28px), var(--cap-max-width));
-      }
-
-      .cap-section {
-        padding: 68px 0;
-      }
-
-      .cap-hero-layout {
-        padding: 72px 0;
-      }
-
-      .cap-hero h1 {
-        font-size: clamp(2.7rem, 14vw, 4.2rem);
-      }
-
-      .cap-hero-actions,
-      .cap-final-cta-actions {
-        flex-direction: column;
-      }
-
-      .cap-button {
-        width: 100%;
-        box-sizing: border-box;
-      }
-
-      .capability-card {
-        padding: 27px;
-      }
-
-      .capability-card ul {
-        grid-template-columns: 1fr;
-      }
-
-      .cap-process-grid,
-      .cap-industry-grid,
-      .cap-why-grid,
-      .cap-footer-layout {
-        grid-template-columns: 1fr;
-      }
-
-      .cap-industry-item {
-        min-height: 82px;
-      }
-
-      .cap-footer-brand {
-        grid-column: auto;
-      }
-    }
-  </style>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Heavy Source provides industrial procurement, equipment sourcing, vendor coordination and project logistics throughout North America.">
+
+<title>Capabilities | Heavy Source LLC</title>
+
+<style>
+
+:root{
+
+--bg:#081321;
+--bg2:#102133;
+--card:#16293d;
+--border:#30475d;
+--text:#f5f7fb;
+--muted:#b7c2cf;
+--orange:#f58a24;
+--orange2:#ff9d43;
+--radius:14px;
+--width:1180px;
+
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+background:var(--bg);
+color:var(--text);
+font-family:Inter,"Segoe UI",Arial,sans-serif;
+line-height:1.6;
+
+}
+
+a{
+
+color:inherit;
+text-decoration:none;
+
+}
+
+.container{
+
+width:min(calc(100% - 40px),var(--width));
+margin:auto;
+
+}
+
+/*************************
+HEADER
+*************************/
+
+header{
+
+position:sticky;
+top:0;
+z-index:999;
+background:rgba(8,19,33,.95);
+border-bottom:1px solid var(--border);
+backdrop-filter:blur(10px);
+
+}
+
+.nav{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+height:80px;
+
+}
+
+.logo{
+
+font-size:1.35rem;
+font-weight:900;
+letter-spacing:.06em;
+
+}
+
+.logo span{
+
+color:var(--orange);
+
+}
+
+nav{
+
+display:flex;
+align-items:center;
+gap:28px;
+
+}
+
+nav a{
+
+font-weight:700;
+color:#d5dde7;
+
+}
+
+nav a:hover{
+
+color:white;
+
+}
+
+.active{
+
+color:white;
+
+}
+
+.rfq{
+
+background:var(--orange);
+padding:12px 18px;
+border-radius:8px;
+color:#101820;
+
+}
+
+.rfq:hover{
+
+background:var(--orange2);
+
+}
+
+/*************************
+HERO
+*************************/
+
+.hero{
+
+padding:110px 0 90px;
+
+background:
+
+linear-gradient(
+90deg,
+rgba(8,19,33,.96),
+rgba(8,19,33,.82)
+),
+
+radial-gradient(
+circle at 82% 30%,
+rgba(245,138,36,.20),
+transparent 35%
+);
+
+}
+
+.hero-grid{
+
+display:grid;
+grid-template-columns:1.2fr .8fr;
+gap:60px;
+align-items:center;
+
+}
+
+.eyebrow{
+
+color:var(--orange);
+font-size:.82rem;
+font-weight:900;
+letter-spacing:.16em;
+text-transform:uppercase;
+margin-bottom:16px;
+
+}
+
+.hero h1{
+
+font-size:clamp(3rem,6vw,5rem);
+line-height:1;
+margin-bottom:24px;
+
+}
+
+.hero p{
+
+color:var(--muted);
+font-size:1.1rem;
+max-width:720px;
+
+}
+
+.buttons{
+
+display:flex;
+gap:15px;
+margin-top:32px;
+
+}
+
+.button{
+
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:14px 24px;
+border-radius:8px;
+font-weight:800;
+
+}
+
+.primary{
+
+background:var(--orange);
+color:#101820;
+
+}
+
+.primary:hover{
+
+background:var(--orange2);
+
+}
+
+.secondary{
+
+border:1px solid #54697d;
+
+}
+
+.summary{
+
+background:rgba(22,41,61,.95);
+
+border:1px solid var(--border);
+
+border-radius:var(--radius);
+
+padding:30px;
+
+}
+
+.summary h2{
+
+margin-bottom:20px;
+
+font-size:1.35rem;
+
+}
+
+.summary ul{
+
+list-style:none;
+
+display:grid;
+
+gap:15px;
+
+}
+
+.summary li{
+
+position:relative;
+
+padding-left:20px;
+
+color:#d9e1ea;
+
+}
+
+.summary li::before{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+top:.65em;
+
+width:7px;
+
+height:7px;
+
+border-radius:50%;
+
+background:var(--orange);
+
+}
+
+/*************************
+GENERAL SECTIONS
+*************************/
+
+section{
+
+padding:80px 0;
+
+}
+
+.heading{
+
+margin-bottom:40px;
+
+max-width:760px;
+
+}
+
+.heading h2{
+
+font-size:2.8rem;
+
+margin-bottom:15px;
+
+}
+
+.heading p{
+
+color:var(--muted);
+
+}
+/*************************
+CAPABILITY CARDS
+*************************/
+
+.capabilities-grid{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:22px;
+
+}
+
+.capability-card{
+
+background:var(--card);
+
+border:1px solid var(--border);
+
+border-radius:var(--radius);
+
+padding:30px;
+
+}
+
+.capability-card:hover{
+
+border-color:var(--orange);
+
+}
+
+.capability-number{
+
+color:var(--orange);
+
+font-size:.78rem;
+
+font-weight:900;
+
+letter-spacing:.14em;
+
+margin-bottom:16px;
+
+}
+
+.capability-card h3{
+
+font-size:1.4rem;
+
+margin-bottom:12px;
+
+}
+
+.capability-card p{
+
+color:var(--muted);
+
+margin-bottom:20px;
+
+}
+
+.capability-card ul{
+
+list-style:none;
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:9px 18px;
+
+padding-top:20px;
+
+border-top:1px solid var(--border);
+
+}
+
+.capability-card li{
+
+position:relative;
+
+padding-left:17px;
+
+font-size:.92rem;
+
+color:#d9e1ea;
+
+}
+
+.capability-card li::before{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+top:.65em;
+
+width:6px;
+
+height:6px;
+
+border-radius:50%;
+
+background:var(--orange);
+
+}
+
+/*************************
+INDUSTRIES
+*************************/
+
+.industries-section{
+
+background:var(--bg2);
+
+border-top:1px solid var(--border);
+
+border-bottom:1px solid var(--border);
+
+}
+
+.industries-grid{
+
+display:grid;
+
+grid-template-columns:repeat(5,1fr);
+
+gap:14px;
+
+}
+
+.industry{
+
+min-height:100px;
+
+display:flex;
+
+align-items:flex-end;
+
+padding:20px;
+
+background:var(--card);
+
+border:1px solid var(--border);
+
+border-radius:12px;
+
+font-weight:800;
+
+}
+
+/*************************
+WHY HEAVY SOURCE
+*************************/
+
+.why-grid{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:18px;
+
+}
+
+.why-card{
+
+background:var(--card);
+
+border-top:3px solid var(--orange);
+
+border-radius:4px 4px 12px 12px;
+
+padding:26px;
+
+}
+
+.why-card h3{
+
+font-size:1.15rem;
+
+margin-bottom:10px;
+
+}
+
+.why-card p{
+
+color:var(--muted);
+
+font-size:.94rem;
+
+}
+
+/*************************
+FINAL CTA
+*************************/
+
+.cta{
+
+background:
+
+linear-gradient(
+110deg,
+rgba(245,138,36,.14),
+transparent 42%
+),
+
+var(--bg2);
+
+border-top:1px solid var(--border);
+
+}
+
+.cta-grid{
+
+display:grid;
+
+grid-template-columns:1fr auto;
+
+align-items:center;
+
+gap:45px;
+
+}
+
+.cta h2{
+
+font-size:clamp(2rem,4vw,3rem);
+
+line-height:1.1;
+
+margin-bottom:14px;
+
+}
+
+.cta p{
+
+color:var(--muted);
+
+max-width:760px;
+
+}
+
+/*************************
+FOOTER
+*************************/
+
+footer{
+
+background:#050d18;
+
+border-top:1px solid var(--border);
+
+padding:55px 0 25px;
+
+}
+
+.footer-grid{
+
+display:grid;
+
+grid-template-columns:1.4fr .7fr .9fr;
+
+gap:50px;
+
+}
+
+.footer-grid h3{
+
+font-size:.9rem;
+
+letter-spacing:.1em;
+
+text-transform:uppercase;
+
+margin-bottom:16px;
+
+}
+
+.footer-grid p,
+
+.footer-grid a{
+
+color:var(--muted);
+
+font-size:.92rem;
+
+}
+
+.footer-links,
+
+.footer-contact{
+
+display:flex;
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:9px;
+
+}
+
+.footer-bottom{
+
+margin-top:40px;
+
+padding-top:20px;
+
+border-top:1px solid var(--border);
+
+color:#7f8c9b;
+
+font-size:.82rem;
+
+}
+
+/*************************
+RESPONSIVE
+*************************/
+
+@media(max-width:950px){
+
+.hero-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.industries-grid{
+
+grid-template-columns:repeat(3,1fr);
+
+}
+
+.why-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:760px){
+
+nav{
+
+gap:14px;
+
+font-size:.9rem;
+
+}
+
+.capabilities-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.cta-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.footer-grid{
+
+grid-template-columns:1fr 1fr;
+
+}
+
+.footer-brand{
+
+grid-column:1/-1;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.container{
+
+width:min(calc(100% - 28px),var(--width));
+
+}
+
+nav a:not(.rfq){
+
+display:none;
+
+}
+
+.hero{
+
+padding:75px 0 65px;
+
+}
+
+.hero h1{
+
+font-size:3rem;
+
+}
+
+.buttons{
+
+flex-direction:column;
+
+}
+
+.button{
+
+width:100%;
+
+}
+
+.capability-card ul,
+
+.industries-grid,
+
+.why-grid,
+
+.footer-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.footer-brand{
+
+grid-column:auto;
+
+}
+
+}
+
+</style>
+
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header class="cap-header">
-    <div class="cap-container cap-nav">
-
-      <a href="index.html" class="cap-logo" aria-label="Heavy Source home">
-        <span>HEAVY</span>
-        <span class="cap-logo-source">SOURCE</span>
-      </a>
-
-      <button
-        class="cap-menu-button"
-        type="button"
-        aria-label="Open navigation menu"
-        aria-expanded="false"
-        aria-controls="cap-main-menu"
-      >
-        ☰
-      </button>
-
-      <nav id="cap-main-menu" class="cap-menu">
-        <a href="index.html">Home</a>
-        <a href="capabilities.html" class="active">Capabilities</a>
-        <a href="industries.html">Industries</a>
-        <a href="about.html">About</a>
-        <a href="index.html#contact">Contact</a>
-        <a href="index.html#contact" class="cap-nav-rfq">
-          Request RFQ
-        </a>
-      </nav>
-
-    </div>
-  </header>
-
-
-  <main>
-
-    <!-- HERO -->
-    <section class="cap-hero">
-      <div class="cap-container cap-hero-layout">
-
-        <div>
-          <p class="cap-eyebrow">
-            Industrial Procurement Across North America
-          </p>
-
-          <h1>
-            We Solve Procurement Problems.
-          </h1>
-
-          <p class="cap-hero-description">
-            Heavy Source provides industrial procurement, equipment sourcing,
-            vendor coordination, material expediting, and project logistics
-            support throughout the United States, Canada, and Mexico.
-          </p>
-
-          <div class="cap-hero-actions">
-            <a
-              href="index.html#contact"
-              class="cap-button cap-button-primary"
-            >
-              Request an RFQ
-            </a>
-
-            <a
-              href="#core-capabilities"
-              class="cap-button cap-button-secondary"
-            >
-              Explore Capabilities
-            </a>
-          </div>
-        </div>
-
-
-        <aside class="cap-hero-panel">
-          <h2>Heavy Source at a Glance</h2>
-
-          <div class="cap-hero-stat">
-            <div class="cap-stat-number">01</div>
-
-            <div>
-              <strong>Single Point of Contact</strong>
-              <span>
-                Procurement, vendors, logistics, and delivery coordination.
-              </span>
-            </div>
-          </div>
-
-          <div class="cap-hero-stat">
-            <div class="cap-stat-number">03</div>
-
-            <div>
-              <strong>Countries Served</strong>
-              <span>
-                United States, Canada, and Mexico.
-              </span>
-            </div>
-          </div>
-
-          <div class="cap-hero-stat">
-            <div class="cap-stat-number">08</div>
-
-            <div>
-              <strong>Core Capabilities</strong>
-              <span>
-                From requirements review through final delivery.
-              </span>
-            </div>
-          </div>
-
-          <div class="cap-hero-stat">
-            <div class="cap-stat-number">01</div>
+<header>
 
-            <div>
-              <strong>Project-Focused Mission</strong>
-              <span>
-                Keep equipment, materials, and schedules moving.
-              </span>
-            </div>
-          </div>
-        </aside>
+<div class="container nav">
 
-      </div>
-    </section>
+<a href="index.html" class="logo">
 
+HEAVY <span>SOURCE</span>
 
-    <!-- INTRODUCTION -->
-    <section class="cap-section cap-section-dark">
-      <div class="cap-container cap-intro-layout">
+</a>
 
-        <div class="cap-intro-copy">
-          <p class="cap-section-label">What We Do</p>
-
-          <h2>
-            Procurement Support from Initial Request Through Final Delivery
-          </h2>
+<nav>
 
-          <p>
-            Heavy Source helps contractors, manufacturers, engineering firms,
-            utilities, municipalities, and industrial operators identify
-            qualified suppliers, source equipment and materials, manage RFQs,
-            coordinate vendors, and arrange project logistics.
-          </p>
-        </div>
+<a href="index.html">Home</a>
 
+<a href="capabilities.html" class="active">Capabilities</a>
 
-        <div class="cap-intro-highlights">
+<a href="index.html#industries">Industries</a>
 
-          <article class="cap-highlight">
-            <div class="cap-highlight-number">01</div>
-
-            <div>
-              <h3>Understand the Requirement</h3>
-
-              <p>
-                We review specifications, quantities, schedules, delivery
-                requirements, and operational priorities.
-              </p>
-            </div>
-          </article>
+<a href="index.html#about">About</a>
 
-          <article class="cap-highlight">
-            <div class="cap-highlight-number">02</div>
+<a href="index.html#contact">Contact</a>
 
-            <div>
-              <h3>Identify Qualified Sources</h3>
+<a href="index.html#contact" class="rfq">Request RFQ</a>
 
-              <p>
-                We coordinate with manufacturers, distributors, dealers, and
-                specialized industrial suppliers.
-              </p>
-            </div>
-          </article>
-
-          <article class="cap-highlight">
-            <div class="cap-highlight-number">03</div>
+</nav>
 
-            <div>
-              <h3>Coordinate Procurement and Delivery</h3>
+</div>
 
-              <p>
-                We manage supplier communication, order follow-up, expediting,
-                transportation, and delivery status.
-              </p>
-            </div>
-          </article>
+</header>
 
-        </div>
-      </div>
-    </section>
-
-
-    <!-- CORE CAPABILITIES -->
-    <section id="core-capabilities" class="cap-section">
-      <div class="cap-container">
-
-        <div class="cap-section-heading">
-          <p class="cap-section-label">Core Capabilities</p>
-
-          <h2>
-            Industrial Procurement and Logistics Support
-          </h2>
+<main>
 
-          <p>
-            Our capabilities support single-item purchases, urgent replacement
-            requirements, ongoing procurement programs, and complex industrial
-            projects.
-          </p>
-        </div>
+<section class="hero">
 
-
-        <div class="capability-grid">
-
-          <article class="capability-card">
-            <div class="capability-number">CAPABILITY 01</div>
-
-            <h3>Industrial Procurement</h3>
-
-            <p>
-              Procurement support for industrial equipment, project materials,
-              replacement parts, consumables, and maintenance requirements.
-            </p>
-
-            <ul>
-              <li>Industrial equipment</li>
-              <li>Project materials</li>
-              <li>Replacement parts</li>
-              <li>MRO requirements</li>
-              <li>Capital equipment</li>
-              <li>Purchase coordination</li>
-            </ul>
-          </article>
-
-
-          <article class="capability-card">
-            <div class="capability-number">CAPABILITY 02</div>
-
-            <h3>Equipment Sourcing</h3>
-
-            <p>
-              Identification and sourcing of new and used equipment through
-              manufacturers, distributors, dealers, and specialty suppliers.
-            </p>
-
-            <ul>
-              <li>Construction equipment</li>
-              <li>Heavy machinery</li>
-              <li>Pumps and systems</li>
-              <li>Generators</li>
-              <li>Compressors</li>
-              <li>Specialized equipment</li>
-            </ul>
-          </article>
-
-
-          <article class="capability-card">
-            <div class="capability-number">CAPABILITY 03</div>
-
-            <h3>Vendor Coordination</h3>
-
-            <p>
-              Organized supplier communication and coordination throughout the
-              procurement process.
-            </p>
-
-            <ul>
-              <li>Supplier identification</li>
-              <li>Vendor communication</li>
-              <li>Availability checks</li>
-              <li>Lead-time verification</li>
-              <li>Order follow-up</li>
-              <li>Issue coordination</li>
-            </ul>
-          </article>
-
-
-          <article class="capability-card">
-            <div class="capability-number">CAPABILITY 04</div>
-
-            <h3>RFQ Management</h3>
-
-            <p>
-              Structured management of customer requirements and supplier
-              quotations to support informed purchasing decisions.
-            </p>
-
-            <ul>
-              <li>Requirements review</li>
-              <li>RFQ preparation</li>
-              <li>Supplier distribution</li>
-              <li>Quote comparison</li>
-              <li>Lead-time evaluation</li>
-              <li>Compliance review</li>
-            </ul>
-          </article>
-
-
-          <article class="capability-card">
-            <div class="capability-number">CAPABILITY 05</div>
-
-            <h3>Material Expediting</h3>
-
-            <p>
-              Proactive supplier follow-up and schedule monitoring to help
-              reduce procurement delays and project interruptions.
-            </p>
-
-            <ul>
-              <li>Order tracking</li>
-              <li>Production follow-up</li>
-              <li>Schedule monitoring</li>
-              <li>Status reporting</li>
-              <li>Shipment updates</li>
-              <li>Delivery coordination</li>
-            </ul>
-          </article>
-
-
-          <article class="capability-card">
-            <div class="capability-number">CAPABILITY 06</div>
-
-            <h3>Project Logistics</h3>
-
-            <p>
-              Transportation coordination for equipment, materials, oversized
-              loads, and specialized project deliveries.
-            </p>
-
-            <ul>
-              <li>Standard freight</li>
-              <li>LTL shipments</li>
-              <li>Full truckload</li>
-              <li>Heavy haul</li>
-              <li>Oversized loads</li>
-              <li>Delivery planning</li>
-            </ul>
-          </article>
-
-
-          <article class="capability-card">
-            <div class="capability-number">CAPABILITY 07</div>
-
-            <h3>Urgent Procurement Support</h3>
-
-            <p>
-              Responsive sourcing for urgent maintenance, shutdown,
-              operational, and jobsite requirements.
-            </p>
-
-            <ul>
-              <li>Critical equipment</li>
-              <li>Replacement parts</li>
-              <li>Inventory searches</li>
-              <li>Expedited RFQs</li>
-              <li>Priority freight</li>
-              <li>Shutdown support</li>
-            </ul>
-          </article>
-
-
-          <article class="capability-card">
-            <div class="capability-number">CAPABILITY 08</div>
-
-            <h3>Cross-Border Procurement</h3>
-
-            <p>
-              Supplier and logistics coordination across the United States,
-              Canada, and Mexico.
-            </p>
-
-            <ul>
-              <li>Supplier sourcing</li>
-              <li>Regional coordination</li>
-              <li>Vendor communication</li>
-              <li>Equipment location</li>
-              <li>Freight planning</li>
-              <li>Project support</li>
-            </ul>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-
-    <!-- PROCESS -->
-    <section class="cap-section cap-section-dark">
-      <div class="cap-container">
-
-        <div class="cap-section-heading">
-          <p class="cap-section-label">Our Process</p>
-
-          <h2>
-            A Disciplined Procurement Workflow
-          </h2>
-
-          <p>
-            Every request follows a clear process designed to improve
-            communication, supplier accountability, schedule visibility, and
-            execution.
-          </p>
-        </div>
-
-
-        <div class="cap-process-grid">
-
-          <article class="cap-process-step">
-            <span>01</span>
-            <h3>Requirements Review</h3>
-            <p>
-              Review specifications, quantities, schedules, delivery
-              requirements, and operational priorities.
-            </p>
-          </article>
-
-          <article class="cap-process-step">
-            <span>02</span>
-            <h3>Supplier Identification</h3>
-            <p>
-              Identify manufacturers, distributors, dealers, and specialty
-              suppliers capable of supporting the request.
-            </p>
-          </article>
-
-          <article class="cap-process-step">
-            <span>03</span>
-            <h3>RFQ Management</h3>
-            <p>
-              Coordinate quotation requests, supplier questions, pricing,
-              availability, and lead times.
-            </p>
-          </article>
-
-          <article class="cap-process-step">
-            <span>04</span>
-            <h3>Quote Evaluation</h3>
-            <p>
-              Compare pricing, technical compliance, commercial terms,
-              availability, and delivery schedules.
-            </p>
-          </article>
-
-          <article class="cap-process-step">
-            <span>05</span>
-            <h3>Purchase Coordination</h3>
-            <p>
-              Coordinate supplier communication, documentation, order
-              confirmation, and procurement follow-up.
-            </p>
-          </article>
-
-          <article class="cap-process-step">
-            <span>06</span>
-            <h3>Delivery Support</h3>
-            <p>
-              Monitor order progress and coordinate transportation through
-              final delivery.
-            </p>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-
-    <!-- INDUSTRIES -->
-    <section class="cap-section">
-      <div class="cap-container">
-
-        <div class="cap-section-heading">
-          <p class="cap-section-label">Industries Supported</p>
-
-          <h2>
-            Supporting Industrial and Infrastructure Markets
-          </h2>
-
-          <p>
-            Heavy Source supports organizations operating across demanding
-            industrial, commercial, construction, environmental, and public
-            infrastructure markets.
-          </p>
-        </div>
-
-
-        <div class="cap-industry-grid">
-          <div class="cap-industry-item">Oil &amp; Gas</div>
-          <div class="cap-industry-item">Construction</div>
-          <div class="cap-industry-item">Manufacturing</div>
-          <div class="cap-industry-item">Infrastructure</div>
-          <div class="cap-industry-item">Utilities</div>
-          <div class="cap-industry-item">Water &amp; Wastewater</div>
-          <div class="cap-industry-item">Environmental</div>
-          <div class="cap-industry-item">Energy &amp; Power</div>
-          <div class="cap-industry-item">Mining</div>
-          <div class="cap-industry-item">Public Works</div>
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- WHY HEAVY SOURCE -->
-    <section class="cap-section cap-section-dark">
-      <div class="cap-container">
-
-        <div class="cap-section-heading">
-          <p class="cap-section-label">Why Heavy Source</p>
-
-          <h2>
-            Responsive, Organized, and Focused on Execution
-          </h2>
-        </div>
-
-
-        <div class="cap-why-grid">
-
-          <article class="cap-why-card">
-            <h3>Single Point of Contact</h3>
-
-            <p>
-              Procurement, supplier communications, transportation, and
-              delivery coordination through one organized point of contact.
-            </p>
-          </article>
-
-          <article class="cap-why-card">
-            <h3>Responsive Communication</h3>
-
-            <p>
-              Clear updates regarding quotations, availability, lead times,
-              order status, and delivery schedules.
-            </p>
-          </article>
-
-          <article class="cap-why-card">
-            <h3>Technical Understanding</h3>
-
-            <p>
-              We work to understand the equipment, application, project
-              conditions, and operational requirements behind each request.
-            </p>
-          </article>
-
-          <article class="cap-why-card">
-            <h3>North American Coverage</h3>
-
-            <p>
-              Procurement, equipment sourcing, vendor coordination, and
-              logistics support across three major markets.
-            </p>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-
-    <!-- COVERAGE -->
-    <section class="cap-section">
-      <div class="cap-container cap-coverage-layout">
-
-        <div class="cap-coverage-copy">
-          <p class="cap-section-label">Geographic Coverage</p>
-
-          <h2>
-            North American Procurement Support
-          </h2>
-
-          <p>
-            Heavy Source coordinates industrial procurement, supplier
-            communication, equipment sourcing, and project logistics across
-            the United States, Canada, and Mexico.
-          </p>
-        </div>
-
-
-        <div class="cap-country-grid">
-
-          <article class="cap-country-card">
-            <div class="cap-country-code">US</div>
-
-            <div>
-              <strong>United States</strong>
-              <span>Nationwide procurement and project support</span>
-            </div>
-          </article>
-
-          <article class="cap-country-card">
-            <div class="cap-country-code">CA</div>
-
-            <div>
-              <strong>Canada</strong>
-              <span>Supplier identification and equipment sourcing</span>
-            </div>
-          </article>
-
-          <article class="cap-country-card">
-            <div class="cap-country-code">MX</div>
-
-            <div>
-              <strong>Mexico</strong>
-              <span>Cross-border procurement and logistics coordination</span>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-
-    <!-- FINAL CTA -->
-    <section class="cap-final-cta">
-      <div class="cap-container cap-final-cta-layout">
-
-        <div class="cap-final-cta-copy">
-          <p class="cap-section-label">Start Your Request</p>
-
-          <h2>
-            Need Equipment, Materials, or Procurement Support?
-          </h2>
-
-          <p>
-            Send Heavy Source your specifications, equipment list, bid
-            package, or project requirements. We will review the request and
-            begin identifying qualified sourcing options.
-          </p>
-        </div>
-
-
-        <div class="cap-final-cta-actions">
-          <a
-            href="index.html#contact"
-            class="cap-button cap-button-primary"
-          >
-            Request an RFQ
-          </a>
-
-          <a
-            href="mailto:info@heavysource.net"
-            class="cap-button cap-button-secondary"
-          >
-            Email Heavy Source
-          </a>
-        </div>
-
-      </div>
-    </section>
-
-  </main>
-
-
-  <!-- FOOTER -->
-  <footer class="cap-footer">
-    <div class="cap-container cap-footer-layout">
-
-      <div class="cap-footer-brand">
-        <a href="index.html" class="cap-logo">
-          <span>HEAVY</span>
-          <span class="cap-logo-source">SOURCE</span>
-        </a>
-
-        <p>
-          Industrial procurement, equipment sourcing, vendor coordination,
-          and project logistics throughout North America.
-        </p>
-      </div>
-
-
-      <div class="cap-footer-links">
-        <h3>Company</h3>
-
-        <a href="index.html">Home</a>
-        <a href="capabilities.html">Capabilities</a>
-        <a href="industries.html">Industries</a>
-        <a href="about.html">About</a>
-        <a href="index.html#contact">Contact</a>
-      </div>
-
-
-      <div class="cap-footer-contact">
-        <h3>Contact</h3>
-
-        <a href="mailto:info@heavysource.net">
-          info@heavysource.net
-        </a>
-
-        <a href="https://heavysource.net">
-          heavysource.net
-        </a>
-
-        <p>
-          United States • Canada • Mexico
-        </p>
-      </div>
-
-    </div>
-
-
-    <div class="cap-container cap-footer-bottom">
-      <p>
-        &copy; <span id="current-year"></span> Heavy Source LLC.
-        All rights reserved.
-      </p>
-    </div>
-  </footer>
-
-
-  <script>
-    const menuButton = document.querySelector(".cap-menu-button");
-    const mainMenu = document.querySelector(".cap-menu");
-
-    if (menuButton && mainMenu) {
-      menuButton.addEventListener("click", function () {
-        const menuIsOpen = mainMenu.classList.toggle("open");
-
-        menuButton.setAttribute(
-          "aria-expanded",
-          menuIsOpen ? "true" : "false"
-        );
-      });
-
-      mainMenu.querySelectorAll("a").forEach(function (link) {
-        link.addEventListener("click", function () {
-          mainMenu.classList.remove("open");
-          menuButton.setAttribute("aria-expanded", "false");
-        });
-      });
-    }
-
-    const currentYear = document.getElementById("current-year");
-
-    if (currentYear) {
-      currentYear.textContent = new Date().getFullYear();
-    }
-  </script>
-
-</body>
-</html>
+<div class="container hero-grid">
+
+<div>
+
+<p class="eyebrow">
+
+Industrial Procurement Across North America
+
+</p>
+
+<h1>
+
+Procurement Support That Keeps Projects Moving.
+
+</h1>
+
+<p>
+
+Heavy Source provides industrial procurement, equipment sourcing,
+vendor coordination, and project logistics across the United States,
+Canada, and Mexico.
+
+</p>
+
+<div class="buttons">
+
+<a href="index.html#contact" class="button primary">
+
+Request an RFQ
+
+</a>
+
+<a href="#capabilities" class="button secondary">
+
+View Capabilities
+
+</a>
+
+</div>
+
+</div>
+
+<div class="summary">
+
+<h2>What We Deliver</h2>
+
+<ul>
+
+<li>Qualified supplier identification</li>
+
+<li>Equipment and material sourcing</li>
+
+<li>RFQ and vendor coordination</li>
+
+<li>Expediting and delivery support</li>
+
+<li>Heavy haul and project logistics</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="capabilities">
+
+<div class="container">
+
+<div class="heading">
+
+<p class="eyebrow">Core Capabilities</p>
+
+<h2>
+
+Focused Support from Request Through Delivery
+
+</h2>
+
+<p>
+
+Four core service areas cover the procurement and logistics needs
+most industrial projects require.
+
+</p>
+
+</div>
+
+<div class="capabilities-grid">
+
+<article class="capability-card">
+
+<div class="capability-number">
+
+CAPABILITY 01
+
+</div>
+
+<h3>Industrial Procurement</h3>
+
+<p>
+
+Sourcing and purchasing support for equipment, materials,
+components, replacement parts, and MRO requirements.
+
+</p>
+
+<ul>
+
+<li>Industrial equipment</li>
+
+<li>Project materials</li>
+
+<li>Replacement parts</li>
+
+<li>MRO requirements</li>
+
+</ul>
+
+</article>
+
+<article class="capability-card">
+
+<div class="capability-number">
+
+CAPABILITY 02
+
+</div>
+
+<h3>Equipment Sourcing</h3>
+
+<p>
+
+New and used equipment sourced through manufacturers,
+distributors, dealers, and specialty suppliers.
+
+</p>
+
+<ul>
+
+<li>Construction equipment</li>
+
+<li>Heavy machinery</li>
+
+<li>Pumps and generators</li>
+
+<li>Specialized equipment</li>
+
+</ul>
+
+</article>
+
+  <article class="capability-card">
+
+<div class="capability-number">
+
+CAPABILITY 03
+
+</div>
+
+<h3>Vendor &amp; RFQ Coordination</h3>
+
+<p>
+
+Supplier identification, quotation management, lead-time review,
+commercial comparison, and order follow-up.
+
+</p>
+
+<ul>
+
+<li>Supplier identification</li>
+
+<li>RFQ distribution</li>
+
+<li>Quote comparison</li>
+
+<li>Lead-time verification</li>
+
+</ul>
+
+</article>
+
+<article class="capability-card">
+
+<div class="capability-number">
+
+CAPABILITY 04
+
+</div>
+
+<h3>Project Logistics</h3>
+
+<p>
+
+Freight, heavy haul, expediting, shipment tracking, and delivery
+coordination for equipment and materials.
+
+</p>
+
+<ul>
+
+<li>LTL and truckload</li>
+
+<li>Heavy haul</li>
+
+<li>Material expediting</li>
+
+<li>Delivery coordination</li>
+
+</ul>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="industries-section">
+
+<div class="container">
+
+<div class="heading">
+
+<p class="eyebrow">Industries Supported</p>
+
+<h2>
+
+Industrial and Infrastructure Markets
+
+</h2>
+
+<p>
+
+Heavy Source supports customers across construction, energy,
+manufacturing, utilities, environmental services, and public infrastructure.
+
+</p>
+
+</div>
+
+<div class="industries-grid">
+
+<div class="industry">
+
+Oil &amp; Gas
+
+</div>
+
+<div class="industry">
+
+Construction
+
+</div>
+
+<div class="industry">
+
+Manufacturing
+
+</div>
+
+<div class="industry">
+
+Infrastructure
+
+</div>
+
+<div class="industry">
+
+Utilities
+
+</div>
+
+<div class="industry">
+
+Water &amp; Wastewater
+
+</div>
+
+<div class="industry">
+
+Environmental
+
+</div>
+
+<div class="industry">
+
+Energy &amp; Power
+
+</div>
+
+<div class="industry">
+
+Mining
+
+</div>
+
+<div class="industry">
+
+Public Works
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="heading">
+
+<p class="eyebrow">Why Heavy Source</p>
+
+<h2>
+
+Responsive, Organized, and Focused on Execution
+
+</h2>
+
+<p>
+
+We provide practical procurement support with clear communication,
+technical understanding, and accountability from request through delivery.
+
+</p>
+
+</div>
+
+<div class="why-grid">
+
+<article class="why-card">
+
+<h3>Single Point of Contact</h3>
+
+<p>
+
+One organized contact for suppliers, procurement, logistics,
+and delivery coordination.
+
+</p>
+
+</article>
+
+<article class="why-card">
+
+<h3>Responsive Communication</h3>
+
+<p>
+
+Clear updates on quotations, availability, lead times,
+order status, and delivery schedules.
+
+</p>
+
+</article>
+
+<article class="why-card">
+
+<h3>Technical Understanding</h3>
+
+<p>
+
+We work to understand the application and operating requirements
+behind each request.
+
+</p>
+
+</article>
+
+<article class="why-card">
+
+<h3>North American Coverage</h3>
+
+<p>
+
+Procurement and logistics support across the United States,
+Canada, and Mexico.
+
+</p>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="cta">
+
+<div class="container cta-grid">
+
+<div>
+
+<p class="eyebrow">Start Your Request</p>
+
+<h2>
+
+Need Equipment, Materials, or Procurement Support?
+
+</h2>
+
+<p>
+
+Send Heavy Source your specifications, equipment list,
+bid package, delivery location, and required date.
+
+</p>
+
+</div>
+
+<div class="buttons">
+
+<a href="index.html#contact" class="button primary">
+
+Request an RFQ
+
+</a>
+
+<a href="mailto:info@heavysource.net" class="button secondary">
+
+Email Heavy Source
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+  
+
+  
